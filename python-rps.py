@@ -20,4 +20,42 @@ while playing:
 
     print('Your choice: ' + user_choice)
 
-    
+    # check if user wants to quit
+    if user_choice == 'q':
+        playing = False
+        print("Thanks for playing!")
+        continue
+
+    computer_choice = random.choice(['r', 'p', 's'])
+
+    print('Computer choice: ' + computer_choice)
+
+    if user_choice == 'r' and computer_choice == 'r':
+        print("Tie!")
+        ties += 1
+    elif user_choice == 'r' and computer_choice == 'p':
+        print("You lose!")
+        losses += 1
+    elif user_choice == 'r' and computer_choice == 's':
+        print("You win!")
+        wins += 1
+    elif user_choice == 'p' and computer_choice == 'r':
+        print("You win!")
+        wins += 1
+    elif user_choice == 'p' and computer_choice == 'p':
+        print("Tie!")
+        ties += 1
+    elif user_choice == 'p' and computer_choice == 's':
+        print("You lose!")
+        losses += 1
+    elif user_choice == 's' and computer_choice == 'r':
+        print("You lose!")
+        losses += 1
+    elif user_choice == 's' and computer_choice == 'p':
+        print("You win!")
+        wins += 1
+    elif user_choice == 's' and computer_choice == 's':
+        print("Tie!")
+        ties += 1
+    else:
+        print("Invalid input. Please try again.")
