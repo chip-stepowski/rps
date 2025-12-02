@@ -1,9 +1,9 @@
-# setup a rock paper scissors game with a computer opponent, and a wins, losses, and ties counter
+# setup a r p s game with a computer opponent, and a wins, losses, and ties counter
 
 # import random as we will need it to make the computer's choice
 import random
 
-print("Welcome to Rock, Paper, Scissors!")
+print("Welcome to r, p, s!")
 
 wins = 0
 losses = 0
@@ -16,7 +16,9 @@ while playing:
     print("Losses: " + str(losses))
     print("Ties: " + str(ties))
 
-    user_choice = input("Enter your move: (r)ock, (p)aper, (s)cissors or (q)uit: ")
+    print('\n')
+
+    user_choice = input("Enter your move: (r)ock, (p)aper, (s)cissors, or (q)uit: ")
 
     print('Your choice: ' + user_choice)
 
@@ -34,28 +36,29 @@ while playing:
         print("Tie!")
         ties += 1
     elif user_choice == 'r' and computer_choice == 'p':
-        print("You lose!")
+        print('Paper beats rock. You lose!')
         losses += 1
     elif user_choice == 'r' and computer_choice == 's':
-        print("You win!")
+        print('Rock beats scissors. You win!')
         wins += 1
     elif user_choice == 'p' and computer_choice == 'r':
-        print("You win!")
+        print('Paper beats rock. You win!')
         wins += 1
     elif user_choice == 'p' and computer_choice == 'p':
         print("Tie!")
         ties += 1
     elif user_choice == 'p' and computer_choice == 's':
-        print("You lose!")
+        print('Scissors beat paper. You lose!')
         losses += 1
     elif user_choice == 's' and computer_choice == 'r':
-        print("You lose!")
+        print('Rock beats scissors. You lose!')
         losses += 1
     elif user_choice == 's' and computer_choice == 'p':
-        print("You win!")
+        print('Scissors beat paper. You win!')
         wins += 1
     elif user_choice == 's' and computer_choice == 's':
         print("Tie!")
         ties += 1
     else:
         print("Invalid input. Please try again.")
+    
